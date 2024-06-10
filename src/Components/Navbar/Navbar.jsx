@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import{Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -9,13 +10,11 @@ const Navbar = () => {
           <h1 className="title">Welcome to Karmadhara!</h1>
           <p className="subtitle">Find and offer services in one place.</p>
           <div className="button-wrapper">
-            <button className="button register-button" tabIndex="0">Register</button>
-            <button className="button browse-button" tabIndex="0">Browse Services</button>
-           
+            <Link to="/register" className="register-button" tabIndex="0">Register</Link>
+            <button className="browse-button" tabIndex="0">Browse Services</button>          
           </div>
         </div>
       </section>
-
       <section class="featured-wrapper">
   <div class="provider-info">
     <div class="provider-image" tabindex="0" role="img" aria-label="Service Provider Image"></div>
