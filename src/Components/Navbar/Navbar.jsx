@@ -7,11 +7,12 @@ const Navbar = () => {
     <>
       <section className="container">
         <div className="content-wrapper">
-          <h1 className="title">Welcome to Karmadhara!</h1>
+          <h1 className="title">Welcome to Karmadhara!</h1>         
           <p className="subtitle">Find and offer services in one place.</p>
           <div className="button-wrapper">
             <Link to="/register" className="register-button" tabIndex="0">Register</Link>
-            <button className="browse-button" tabIndex="0">Browse Services</button>          
+            <Link to="/login" className="login-button" tabIndex="0">Login</Link>  
+            <Link to="/browse" className="browse-button" tabIndex="0">Browse</Link>       
           </div>
         </div>
       </section>
