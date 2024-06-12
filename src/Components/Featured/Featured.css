@@ -1,0 +1,54 @@
+/* Featured service providers */
+.featured-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;/*Adujst this if the box is bigger or maller than you want*/
+    margin-top: 30px;
+  }
+  
+  .provider-info {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .provider-image {
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.5);
+    width: 100px;
+    height: 100px;
+  }
+  
+  .provider-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .featured-title {
+    font: 700 24px/1.33 Roboto, sans-serif;
+  }
+  
+  .featured-subtitle {
+  margin-top: auto;
+    margin-left: 5px;
+    font: 400 16px/1.5 Roboto, sans-serif;
+  }
+  .featured-subtitle a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  @media (max-width: 991px) {
+    .featured-wrapper {
+      margin-top: 40px;
+      padding: 20px; /* Adjusted padding for better vertical spacing */
+    }
+  
+    .provider-info {
+      flex-wrap: wrap;
+      gap: 10px; /* Adjusted gap for mobile view */
+    }
+  }

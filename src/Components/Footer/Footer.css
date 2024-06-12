@@ -1,0 +1,100 @@
+.container3 {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    color: #000;
+    line-height: 60%;
+    justify-content: center;
+    padding: 0 50px;
+  }
+  
+  @media (max-width: 991px) {
+    .container3 {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
+  .content-wrapper3 {
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    flex-direction: column;
+  }
+  
+  .heading {
+    text-align: center;
+    font: 700 30px/80% Roboto, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .heading {
+      max-width: 100%;
+    }
+  }
+  
+  .subheading {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    margin-top: 1px;
+  }
+  
+  @media (max-width: 991px) {
+    .subheading {
+      max-width: 100%;
+    }
+  }
+  
+  .cta-button {
+    font-family: Roboto, sans-serif;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #000;
+    align-self: center;
+    margin-top: 0;
+    width: 240px;
+    max-width: 100%;
+    color: #fff;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 10px;
+  
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .cta-button {
+      white-space: initial;
+      padding: 0 10px;
+    }
+  }
+.footer-nav {
+    display: flex; 
+    justify-content: center; 
+    align-self: center; 
+    width: 578px; 
+    max-width: 100%;
+    gap: 20px; 
+    font: 400 20px/28pxGeorgia, 'Times New Roman', Times, serif; 
+    color: #000; 
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+ 
+  
+  .footer-link {
+    display: inline-block;
+    text-decoration: none; 
+    color: inherit;
+  }
+  
+  
+  @media (max-width: 991px) {
+    .footer-nav {
+      flex-wrap: wrap; 
+    }
+  }
+  
