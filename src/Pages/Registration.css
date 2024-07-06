@@ -1,272 +1,203 @@
-.div { background-color: #fff; display: flex; flex-direction: column; } 
-    .div-2 { justify-content: center; align-items: center; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12); background-color: #fff; display: flex; gap: 20px; color: #000; padding: 20px; } 
-    @media (max-width: 991px) { .div-2 { flex-wrap: wrap; } } 
-    .div-3 { border-radius: 100px; background-color: rgba(0, 0, 0, 0.1); align-self: stretch; width: 40px; height: 40px; } 
-    .div-4 { align-self: stretch; flex: 1; margin: auto 0; font: 500 28px/129% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-4 { max-width: 100%; } } 
-    .div-5 { justify-content: center; background-color: #fff; align-self: stretch; display: flex; gap: 20px; font-size: 16px; font-weight: 400; white-space: nowrap; line-height: 150%; margin: auto 0; } 
-    @media (max-width: 991px) { .div-5 { white-space: initial; } } 
-    .btn { font-family: Roboto, sans-serif; border: none; background: none; cursor: pointer; } 
-    .div-6 { font-family: Roboto, sans-serif; } 
-    .div-7 { font-family: Roboto, sans-serif; } 
-    .div-8 { font-family: Roboto, sans-serif; } 
-    .div-9 { justify-content: center; align-items: center; display: flex; width: 100%; padding: 24px 60px; } 
-    @media (max-width: 991px) { .div-9 { max-width: 100%; padding: 0 20px; } } 
-    .div-10 { width: 100%; max-width: 1100px; } 
-    @media (max-width: 991px) { .div-10 { max-width: 100%; } } 
-    .div-11 { gap: 20px; display: flex; } 
-    @media (max-width: 991px) { .div-11 { flex-direction: column; align-items: stretch; gap: 0px; } } 
-    .column { display: flex; flex-direction: column; line-height: normal; width: 57%; margin-left: 0px; } 
-    @media (max-width: 991px) { .column { width: 100%; } } 
-    .div-12 { display: flex; flex-direction: column; align-self: stretch; color: #000; margin: auto 0; } 
-    @media (max-width: 991px) { .div-12 { max-width: 100%; margin-top: 40px; } } 
-    .div-13 { font: 700 40px/120% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-13 { max-width: 100%; } } 
-    .div-14 { margin-top: 24px; font: 400 16px/150% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-14 { max-width: 100%; } } 
-    .column-2 { display: flex; flex-direction: column; line-height: normal; width: 43%; margin-left: 20px; } 
-    @media (max-width: 991px) { .column-2 { width: 100%; } } 
-    .div-15 { justify-content: center; display: flex; flex-grow: 1; flex-direction: column; font-size: 14px; color: #000; font-weight: 500; line-height: 143%; } 
-    @media (max-width: 991px) { .div-15 { max-width: 100%; margin-top: 40px; } } 
-    .div-16 { font-family: Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-16 { max-width: 100%; } } 
-    .div-17 { display: flex; margin-top: 4px; gap: 8px; font-weight: 400; } 
-    @media (max-width: 991px) { .div-17 { max-width: 100%; flex-wrap: wrap; } } 
-    .div-18 { font-family: Roboto, sans-serif; justify-content: center; align-items: center; border-radius: 6px; background-color: rgba(0, 0, 0, 0.05); white-space: nowrap; flex: 1; padding: 8px; } 
-    @media (max-width: 991px) { .div-18 { white-space: initial; padding: 0 20px; } } 
-    .div-19 { font-family: Roboto, sans-serif; justify-content: center; align-items: start; border-radius: 6px; background-color: rgba(0, 0, 0, 0.05); flex: 1; padding: 8px 8px 8px 26px; } 
-    @media (max-width: 991px) { .div-19 { padding-left: 10px; } } 
-    .div-20 { color: rgba(0, 0, 0, 0.5); margin-top: 4px; font: 400 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-20 { max-width: 100%; } } 
-    .div-21 { justify-content: center; align-items: center; border-radius: 8px; background-color: #000; color: #fff; white-space: nowrap; padding: 12px; font: 16px/150% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-21 { max-width: 100%; white-space: initial; padding: 0 20px; } } 
-    .div-22 { justify-content: center; align-items: center; display: flex; width: 100%; font-size: 14px; color: rgba(0, 0, 0, 0.5); font-weight: 400; line-height: 143%; padding: 0 60px 16px; } 
-    @media (max-width: 991px) { .div-22 { max-width: 100%; padding: 0 20px; } } 
-    .div-23 { display: flex; width: 100%; max-width: 1094px; flex-direction: column; } 
-    @media (max-width: 991px) { .div-23 { max-width: 100%; } } 
-    .div-24 { color: #000; text-align: center; align-self: center; font: 700 40px/120% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-24 { max-width: 100%; } } 
-    .div-25 { display: flex; margin-top: 23px; gap: 20px; justify-content: space-between; } 
-    @media (max-width: 991px) { .div-25 { max-width: 100%; flex-wrap: wrap; } } 
-    .div-26 { justify-content: center; display: flex; flex-direction: column; } 
-    @media (max-width: 991px) { .div-26 { max-width: 100%; } } 
-    .div-27 { color: #000; font-family: Roboto, sans-serif; font-weight: 500; } 
-    @media (max-width: 991px) { .div-27 { max-width: 100%; } } 
-    .div-28 { 
-        text-overflow: ellipsis; 
-        font-family: Roboto, sans-serif; 
-        border-radius: 6px; 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px; 
-        background-color: #fff; 
-        margin-top: 4px; 
-        white-space: nowrap; 
-        justify-content: center; 
-        padding: 8px 12px; 
-    } 
-    @media (max-width: 991px) { .div-28 { max-width: 100%; white-space: initial; } } 
-    .div-29 { margin-top: 4px; font: 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-29 { max-width: 100%; } } 
-    .div-30 { justify-content: center; display: flex; flex-direction: column; } 
-    @media (max-width: 991px) { .div-30 { max-width: 100%; } } 
-    .div-31 { color: #000; font-family: Roboto, sans-serif; font-weight: 500; } 
-    @media (max-width: 991px) { .div-31 { max-width: 100%; } } 
-    .div-32 { 
-        text-overflow: ellipsis; 
-        font-family: Roboto, sans-serif; 
-        border-radius: 6px; 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px; 
-        background-color: #fff; 
-        margin-top: 4px; 
-        white-space: nowrap; 
-        justify-content: center; 
-        padding: 8px 12px; 
-    } 
-    @media (max-width: 991px) { .div-32 { max-width: 100%; white-space: initial; } } 
-    .div-33 { margin-top: 4px; font: 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-33 { max-width: 100%; } } 
-    .div-34 { display: flex; margin-top: 40px; gap: 20px; justify-content: space-between; } 
-    @media (max-width: 991px) { .div-34 { max-width: 100%; flex-wrap: wrap; } } 
-    .div-35 { justify-content: center; display: flex; flex-direction: column; } 
-    @media (max-width: 991px) { .div-35 { max-width: 100%; } } 
-    .div-36 { color: #000; font-family: Roboto, sans-serif; font-weight: 500; } 
-    @media (max-width: 991px) { .div-36 { max-width: 100%; } } 
-    .div-37 { 
-        text-overflow: ellipsis; 
-        font-family: Roboto, sans-serif; 
-        border-radius: 6px; 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px; 
-        background-color: #fff; 
-        margin-top: 4px; 
-        white-space: nowrap; 
-        justify-content: center; 
-        padding: 8px 12px; 
-    } 
-    @media (max-width: 991px) { .div-37 { max-width: 100%; white-space: initial; } } 
-    .div-38 { margin-top: 4px; font: 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-38 { max-width: 100%; } } 
-    .div-39 { justify-content: center; display: flex; flex-direction: column; } 
-    @media (max-width: 991px) { .div-39 { max-width: 100%; } } 
-    .div-40 { color: #000; font-family: Roboto, sans-serif; font-weight: 500; } 
-    @media (max-width: 991px) { .div-40 { max-width: 100%; } } 
-    .div-41 { 
-        text-overflow: ellipsis; 
-        font-family: Roboto, sans-serif; 
-        border-radius: 6px; 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px;
-        background-color: #fff; 
-        margin-top: 4px; 
-        white-space: nowrap; 
-        justify-content: center; 
-        padding: 8px 12px; 
-    } 
-    @media (max-width: 991px) { .div-41 { max-width: 100%; white-space: initial; } } 
-    .div-42 { margin-top: 4px; font: 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-42 { max-width: 100%; } } 
-    .div-43 { display: flex; margin-top: 40px; gap: 20px; justify-content: space-between; } 
-    @media (max-width: 991px) { .div-43 { max-width: 100%; flex-wrap: wrap; } } 
-    .div-44 { justify-content: center; display: flex; flex-direction: column; } 
-    @media (max-width: 991px) { .div-44 { max-width: 100%; } } 
-    .div-45 { color: #000; font-family: Roboto, sans-serif; font-weight: 500; } 
-    @media (max-width: 991px) { .div-45 { max-width: 100%; } } 
-    .div-46 { 
-        text-overflow: ellipsis; 
-        font-family: Roboto, sans-serif; 
-        border-radius: 6px; 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px; 
-        background-color: #fff; 
-        margin-top: 4px; 
-        white-space: nowrap; 
-        justify-content: center; 
-        padding: 8px 12px; 
-    } 
-    @media (max-width: 991px) { .div-46 { max-width: 100%; white-space: initial; } } 
-    .div-47 { margin-top: 4px; font: 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-47 { max-width: 100%; } } 
-    .div-48 { justify-content: center; display: flex; flex-direction: column; } 
-    @media (max-width: 991px) { .div-48 { max-width: 100%; } } 
-    .div-49 { color: #000; font-family: Roboto, sans-serif; font-weight: 500; } 
-    @media (max-width: 991px) { .div-49 { max-width: 100%; } } 
-    .div-50 { 
-        text-overflow: ellipsis; 
-        font-family: Roboto, sans-serif; 
-        border-radius: 6px; 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px; 
-        background-color: #fff; 
-        margin-top: 4px; 
-        white-space: nowrap; 
-        justify-content: center; 
-        padding: 8px 12px; 
-    } 
-    @media (max-width: 991px) { .div-50 { max-width: 100%; white-space: initial; } } 
-    .div-51 { margin-top: 4px; font: 12px/133% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-51 { max-width: 100%; } } 
-    .div-52 { 
-        justify-content: center; 
-        align-items: center; 
-        border-radius: 8px; 
-        background-color: #000; 
-        align-self: center; 
-        margin-top: 40px; 
-        width: 258px; 
-        max-width: 100%; 
-        color: #fff; 
-        white-space: nowrap; 
-        padding: 12px; 
-        font: 500 16px/150% Roboto, sans-serif; 
-    } 
-    @media (max-width: 991px) { .div-52 { white-space: initial; padding: 0 20px; } } 
-    .div-53 { justify-content: center; align-items: center; display: flex; width: 100%; padding: 0 60px 26px; } 
-    @media (max-width: 991px) { .div-53 { max-width: 100%; padding: 0 20px; } } 
-    .div-54 { width: 100%; max-width: 1100px; } 
-    @media (max-width: 991px) { .div-54 { max-width: 100%; } } 
-    .div-55 { gap: 20px; display: flex; } 
-    @media (max-width: 991px) { .div-55 { flex-direction: column; align-items: stretch; gap: 0px; } } 
-    .column-3 { display: flex; flex-direction: column; line-height: normal; width: 50%; margin-left: 0px; } 
-    @media (max-width: 991px) { .column-3 { width: 100%; } } 
-    .div-56 { 
-        display: flex; 
-        flex-grow: 1; 
-        flex-direction: column; 
-        font-size: 16px; 
-        color: #000; 
-        line-height: 150%; 
-    } 
-    @media (max-width: 991px) { .div-56 { max-width: 100%; margin-top: 40px; } } 
-    .div-57 { font: 700 40px/48px Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-57 { max-width: 100%; } } 
-    .div-58 { font-family: Roboto, sans-serif; font-weight: 400; margin-top: 24px; } 
-    @media (max-width: 991px) { .div-58 { max-width: 100%; } } 
-    .div-59 { 
-        font-family: Roboto, sans-serif; 
-        justify-content: center; 
-        align-items: center; 
-        border-radius: 8px; 
-        background-color: #000; 
-        margin-top: 24px; 
-        width: 240px; 
-        max-width: 100%; 
-        color: #fff; 
-        font-weight: 500; 
-        white-space: nowrap; 
-        padding: 12px; 
-    } 
-    @media (max-width: 991px) { .div-59 { white-space: initial; padding: 0 20px; } } 
-    .column-4 { display: flex; flex-direction: column; line-height: normal; width: 50%; margin-left: 20px; } 
-    @media (max-width: 991px) { .column-4 { width: 100%; } } 
-    .div-60 { 
-        justify-content: center; 
-        align-self: stretch; 
-        display: flex; 
-        padding-top: 20px; 
-        flex-direction: column; 
-        font-weight: 400; 
-        margin: auto 0; 
-    } 
-    @media (max-width: 991px) { .div-60 { max-width: 100%; margin-top: 40px; } } 
-    .div-61 { display: flex; gap: 16px; } 
-    @media (max-width: 991px) { .div-61 { flex-wrap: wrap; } } 
-    .div-62 { 
-        text-overflow: ellipsis; 
-        justify-content: center; 
-        align-items: center; 
-        border-radius: 30px; 
-        background-color: rgba(0, 0, 0, 0.05); 
-        color: #000; 
-        white-space: nowrap; 
-        text-align: center; 
-        width: 60px; 
-        height: 60px; 
-        padding: 0 11px; 
-        font: 38px/160% Roboto, sans-serif; 
-    } 
-    @media (max-width: 991px) { .div-62 { white-space: initial; } } 
-    .div-63 { display: flex; flex-direction: column; flex: 1; margin: auto 0; } 
-    @media (max-width: 991px) { .div-63 { max-width: 100%; } } 
-    .div-64 { color: #000; font: 20px/140% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-64 { max-width: 100%; } } 
-    .div-65 { color: rgba(0, 0, 0, 0.5); font: 16px/150% Roboto, sans-serif; } 
-    @media (max-width: 991px) { .div-65 { max-width: 100%; } } 
-    .img { 
-        object-fit: auto; 
-        object-position: center; 
-        width: 100%; 
-        stroke-width: 1px; 
-        stroke: rgba(0, 0, 0, 0.1); 
-        border-color: rgba(0, 0, 0, 0.1); 
-        border-style: solid; 
-        border-width: 1px; 
-        margin-top: 19px; 
-    } 
-    @media (max-width: 991px) { .img { max-width: 100%; } } 
+/* Root Variables */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333; /* Slightly lighter for better contrast */
+    --background-color: #f9f9f9;
+    --text-color: #333333; /* Darker shade for better readability */
+    --input-background: #ffffff;
+    --input-border: #e0e0e0;
+    --button-hover: #555555; /* Lighter for better readability */
+    --selected-color: #f80909;
+    --gap: 20px;
+    --font-family: 'Roboto', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Container Styling */
+.registration-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--input-background);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: var(--primary-color); /* Changed to primary color (black) */
+}
+
+header .btn {
+    padding: 10px 20px;
+}
+
+/* Button Styling */
+.btn {
+    font-family: var(--font-family);
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    transition: background-color var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+.btn.selected {
+    background-color: var(--selected-color);
+}
+
+/* User Type Selection */
+.user-type-selection {
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--input-background);
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.user-type-selection h2 {
+    font-size: 28px;
+    color: var(--primary-color); /* Changed to primary color (black) */
+    margin-bottom: var(--gap);
+}
+
+.user-type-selection p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: var(--gap);
+}
+
+.user-type-selection .btn {
+    margin: 10px;
+}
+
+/* Registration Form */
+.registration-form {
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--input-background);
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.registration-form h2 {
+    font-size: 28px;
+    color: var(--primary-color); /* Changed to primary color (black) */
+    margin-bottom: var(--gap);
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.registration-form div {
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--text-color);
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    margin-top: 5px;
+    transition: border-color var(--transition);
+}
+
+.registration-form input:focus {
+    border-color: var(--primary-color);
+}
+
+.registration-form small {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Service Provider Additional Section */
+.service-provider-additional {
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--input-background);
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-provider-additional h2 {
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: var(--gap);
+}
+
+.service-provider-additional p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: var(--gap);
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .registration-page {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    .user-type-selection, 
+    .registration-form, 
+    .service-provider-additional {
+        padding: 20px;
+    }
+
+    .registration-form h2,
+    .service-provider-additional h2 {
+        font-size: 24px;
+    }
+}

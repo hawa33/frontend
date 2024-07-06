@@ -1,60 +1,77 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Outlet } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import ServiceProvider from './Components/ServiceProvider/ServiceProvider';
+import Featured from './Components/Featured/Featured';
 import RegistrationPage from './Pages/RegistrationPage';
 import LoginPage from './Pages/LoginPage';
 import Browse from './Pages/Browse';
-import Footer from './Components/Footer/Footer';
-import Featured from './Components/Featured/Featured';
-import ServiceProvider from './Components/ServiceProvider/ServiceProvider';
 
-function App() {
-  return (
-    <BrowserRouter>
-        <Navbar/>
-      <ConditionalWrapper>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/register" element={<RegistrationPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/browse" element={<Browse />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </ConditionalWrapper>
-    </BrowserRouter>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/featured" element={<FeaturedServices />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/browse" element={<Browse />} />
+        <Route path="/login" element={<LoginPage />} /> {/* Added Login route */}
+      </Route>
+      <Route element={<AuthLayout />}>
+        <Route path="/register" element={<RegistrationPage />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
 
-const ConditionalWrapper = ({ children }) => {
+const Layout = () => {
   const location = useLocation();
-  const isAuthPage = ['/register', '/login'].includes(location.pathname);
+  const showNavbar = ['/', '/featured', '/browse', '/login'].includes(location.pathname);
 
   return (
     <>
-      {!isAuthPage && <Featured />}
-      {!isAuthPage && <ServiceProvider />}
-      {children}
+      {showNavbar && <Navbar />}
+      <ServiceProvider />
+      <Outlet />
+      <Footer />
     </>
   );
 };
 
+const AuthLayout = () => (
+  <>
+    <Outlet />
+    <Footer />
+  </>
+);
+
 const Home = () => (
   <div>
-    
+    <h1>Home Page</h1>
+    {/* Add home page content */}
   </div>
+);
+
+const FeaturedServices = () => (
+  <>
+    <Featured />
+    {/* Add featured services content */}
+  </>
 );
 
 const About = () => (
   <div>
     <h1>About Page</h1>
+    {/* Add about page content */}
   </div>
 );
 
 const Contact = () => (
   <div>
     <h1>Contact Page</h1>
+    {/* Add contact page content */}
   </div>
 );
 

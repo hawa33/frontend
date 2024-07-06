@@ -4,6 +4,7 @@
   justify-content: center; /* Center horizontally */
   align-items: flex-start; /* Align items to the top */
   width: 100%;
+  padding: 0 20px; /* Added padding for responsiveness */
 }
 
 /* Content wrapper styles */
@@ -17,6 +18,7 @@
   padding: 20px; /* Added padding for spacing */
 }
 
+/* Title styles */
 .title {
   color: #000;
   margin: 15px 0 10px; /* Adjusted margin */
@@ -24,32 +26,25 @@
   text-align: center; /* Center the text */
 }
 
+/* Subtitle styles */
 .subtitle {
-  color: #000;
+  color: #333; /* Slightly lighter color for better contrast */
   margin: 10px 0 15px 0;
   font-family: Roboto, sans-serif;
   font-weight: 400;
   text-align: center; /* Center the text */
 }
 
+/* Button wrapper styles */
 .button-wrapper {
   display: flex;
   justify-content: center; /* Center the buttons horizontally */
   align-items: center; /* Center the buttons vertically */
+  gap: 0.75rem; /* Added gap for spacing */
   margin-top: 20px; /* Added margin for spacing */
 }
 
-@media (max-width: 991px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-}
-.login-register-wrapper {
-  display: flex;
-  gap: 0.75rem;
-}
-
+/* Button styles */
 .login-button,
 .register-button,
 .browse-button {
@@ -60,45 +55,54 @@
   border-radius: 0.5rem;
   padding: 0.75rem;
   cursor: pointer;
-  text-decoration: none; /* Added to ensure consistent styling */
+  text-decoration: none; /* Ensures consistent styling */
   color: inherit; /* Inherit the color */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Register and login button styles */
 .register-button,
 .login-button {
   padding: 10px 20px; /* Adjusted padding */
   margin: 5px; /* Adjusted margin */
+  background-color: #000000; /* Consistent background color */
+  color: #ffffff; /* White text */
+  border: 2px solid #000000; /* Border for better visibility */
 }
 
+/* Browse button styles */
 .browse-button {
   padding: 10px 20px;
   margin: 5px;
   border: none;
-  border-radius: 5px;
-  color: rgb(255, 255, 255);
-  background-color: black;
+  border-radius: 0.5rem; /* Consistent border-radius */
+  color: #ffffff;
+  background-color: #000000;
   font-size: 16px;
 }
 
+/* Hover effects for browse button */
 .browse-button:hover {
   color: #000000;
   background-color: #ffffff;
   transform: scale(1.05);
 }
 
+/* Focus effects for browse button */
 .browse-button:focus {
   outline: 2px solid #000000;
   outline-offset: 2px;
 }
 
+/* Hover effects for login and register buttons */
 .login-button:hover,
 .register-button:hover {
-  color: white;
+  color: #ffffff;
   background-color: #000000;
   transform: scale(1.05);
 }
 
+/* Focus effects for login and register buttons */
 .login-button:focus,
 .register-button:focus {
   outline: 2px solid #000000;
