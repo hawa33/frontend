@@ -8,19 +8,21 @@ import RegistrationPage from './Pages/RegistrationPage';
 import LoginPage from './Pages/LoginPage';
 import Browse from './Pages/Browse';
 
+
 const App = () => (
   <BrowserRouter>
+    
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/featured" element={<FeaturedServices />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/browse" element={<Browse />} />
-        <Route path="/login" element={<LoginPage />} /> {/* Added Login route */}
       </Route>
       <Route element={<AuthLayout />}>
         <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/login" element={<LoginPage />} /> 
+        <Route path="/browse" element={<Browse />} />
       </Route>
     </Routes>
   </BrowserRouter>
@@ -28,7 +30,7 @@ const App = () => (
 
 const Layout = () => {
   const location = useLocation();
-  const showNavbar = ['/', '/featured', '/browse', '/login'].includes(location.pathname);
+  const showNavbar = ['/', '/featured', '/browse', '/login', '/register', '/browse'].includes(location.pathname);
 
   return (
     <>
@@ -49,8 +51,7 @@ const AuthLayout = () => (
 
 const Home = () => (
   <div>
-    <h1>Home Page</h1>
-    {/* Add home page content */}
+   
   </div>
 );
 

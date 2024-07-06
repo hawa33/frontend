@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; // Importing useHistory from react-router-dom
+import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const LoginPage = () => {
-  const history = useHistory(); // Using useHistory hook
-
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to top on component mount
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Perform login logic here (e.g., API call)
-    // Assuming login is successful, redirect based on user role
-    if (email === 'admin@example.com' && password === 'admin') {
-      history.push('/admin'); // Redirect to admin page
-    } else {
-      history.push('/customer'); // Redirect to customer page
-    }
+    // Handle login logic here
+    console.log('Email:', email);
+    console.log('Password:', password);
+  };
+
+  const scrollToForm = () => {
+    formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -27,15 +32,15 @@ const LoginPage = () => {
           <h1 className="brand-name">Karmadhara</h1>
         </div>
         <nav className="nav-menu">
-          <button className="nav-item" onClick={() => history.push('/')}>Home</button>
-          <button className="nav-item" onClick={() => history.push('/about')}>About</button>
-          <button className="nav-item button" onClick={() => history.push('/login')}>Login</button>
+          <button className="nav-item" onClick={() => navigate('/')}>Home</button>
+          <button className="nav-item" onClick={() => navigate('/about')}>About</button>
+          <button className="nav-item button" onClick={scrollToForm}>Login</button>
         </nav>
       </header>
       
       <h2 className="welcome-message">Welcome Back!</h2>
       
-      <main className="login-container">
+      <main className="login-container" ref={formRef}>
         <div className="login-content">
           <div className="login-grid">
             <h3 className="login-title" id="login-title">Login to Your Account</h3>
@@ -68,18 +73,14 @@ const LoginPage = () => {
               
               <div className="form-actions">
                 <button type="submit" className="login-button button">Login</button>
-                <button type="button" className="forgot-password" onClick={() => history.push('/forgot-password')}>Forgot Password?</button>
+                <button type="button" className="forgot-password" onClick={() => navigate('/forgot-password')}>Forgot Password?</button>
               </div>
             </form>
           </div>
         </div>
       </main>
-      
-      <footer className="footer">
-        {/* Footer content */}
-      </footer>
     </div>
   );
-}
+};
 
 export default LoginPage;
