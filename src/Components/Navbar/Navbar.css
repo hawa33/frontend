@@ -5,6 +5,7 @@
   align-items: flex-start; /* Align items to the top */
   width: 100%;
   padding: 0 20px; /* Added padding for responsiveness */
+  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 }
 
 /* Content wrapper styles */
@@ -16,23 +17,27 @@
   width: 100%;
   max-width: 1200px; /* Adjusted max-width */
   padding: 20px; /* Added padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 /* Title styles */
 .title {
   color: #000;
-  margin: 15px 0 10px; /* Adjusted margin */
-  font: 700 40px/120% Roboto, sans-serif;
+  margin: 20px 0 10px; /* Adjusted margin for better spacing */
+  font: 700 40px/120% "Roboto", sans-serif; /* Quoted font name */
   text-align: center; /* Center the text */
+  letter-spacing: 0.5px; /* Slight letter-spacing for clarity */
 }
 
 /* Subtitle styles */
 .subtitle {
   color: #333; /* Slightly lighter color for better contrast */
   margin: 10px 0 15px 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif; /* Quoted font name */
   font-weight: 400;
+  font-size: 18px; /* Explicit font size for consistency */
   text-align: center; /* Center the text */
+  line-height: 1.5; /* Improved line-height for readability */
 }
 
 /* Button wrapper styles */
@@ -40,8 +45,9 @@
   display: flex;
   justify-content: center; /* Center the buttons horizontally */
   align-items: center; /* Center the buttons vertically */
-  gap: 0.75rem; /* Added gap for spacing */
+  gap: 1rem; /* Gap between the buttons */
   margin-top: 20px; /* Added margin for spacing */
+  flex-direction: row; /* Make buttons inline */
 }
 
 /* Button styles */
@@ -51,9 +57,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Roboto, sans-serif;
-  border-radius: 0.5rem;
-  padding: 0.75rem;
+  font-family: "Roboto", sans-serif; /* Quoted font name */
+  border-radius: 0.5rem; /* Rounded corners for all buttons */
+  padding: 0.75rem 1.5rem; /* Adjusted padding for better button sizing */
   cursor: pointer;
   text-decoration: none; /* Ensures consistent styling */
   color: inherit; /* Inherit the color */
@@ -63,48 +69,38 @@
 /* Register and login button styles */
 .register-button,
 .login-button {
-  padding: 10px 20px; /* Adjusted padding */
-  margin: 5px; /* Adjusted margin */
-  background-color: #000000; /* Consistent background color */
+  padding: 10px 20px; /* Consistent padding */
+  background-color: #000000; /* Black background */
   color: #ffffff; /* White text */
-  border: 2px solid #000000; /* Border for better visibility */
+  border: 2px solid #000000; /* Border for definition */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
 }
 
 /* Browse button styles */
 .browse-button {
   padding: 10px 20px;
-  margin: 5px;
-  border: none;
+  border: 2px solid transparent; /* Transparent border for better sizing consistency */
   border-radius: 0.5rem; /* Consistent border-radius */
-  color: #ffffff;
-  background-color: #000000;
+  color: #ffffff; /* White text */
+  background-color: #000000; /* Black background */
   font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effects for browse button */
-.browse-button:hover {
-  color: #000000;
-  background-color: #ffffff;
-  transform: scale(1.05);
-}
-
-/* Focus effects for browse button */
-.browse-button:focus {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
-}
-
-/* Hover effects for login and register buttons */
+/* Hover effects for buttons */
+.browse-button:hover,
 .login-button:hover,
 .register-button:hover {
-  color: #ffffff;
-  background-color: #000000;
-  transform: scale(1.05);
+  color: #000000; /* Black text */
+  background-color: #ffffff; /* White background */
+  transform: scale(1.05); /* Slight scaling for interaction feedback */
 }
 
-/* Focus effects for login and register buttons */
+/* Focus effects for buttons */
+.browse-button:focus,
 .login-button:focus,
 .register-button:focus {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
+  outline: 2px solid #000000; /* Black outline for focus state */
+  outline-offset: 2px; /* Space between button and outline */
 }

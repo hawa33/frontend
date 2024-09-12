@@ -74,15 +74,7 @@ const RegistrationPage = () => {
   const formRef = useRef(null);
 
   const selectUserType = (type) => {
-    console.log(`Selected user type: ${type}`);
     setUserType(type);
-    if (type === 'service-provider') {
-      console.log('Service Provider Selected');
-    } else if (type === 'customer') {
-      console.log('Customer user selected');
-    } else {
-      console.log('Unknown user type selected');
-    }
   };
 
   const scrollToForm = () => {
@@ -90,13 +82,11 @@ const RegistrationPage = () => {
   };
 
   const register = () => {
-    console.log('Register user');
-    // Add your registration logic here
+    // Registration logic here
   };
 
   const uploadDocument = () => {
-    console.log('Upload document');
-    // Add your document upload logic here
+    // Document upload logic here
   };
 
   return (

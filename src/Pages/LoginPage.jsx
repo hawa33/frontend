@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
-const LoginPage = () => {
+const LoginPage = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,9 +15,17 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    // Simulated login logic for demonstration
+    // Replace with actual login logic using an API call or authentication service
+    if (email === 'user@example.com' && password === 'password') {
+      // Update authentication state
+      setIsLoggedIn(true);
+      // Redirect to /customer page after successful login
+      navigate('/customer');
+    } else {
+      // Handle incorrect login credentials
+      alert('Invalid email or password. Please try again.');
+    }
   };
 
   const scrollToForm = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import './toprated.css'
-const toprated = () => {
+import './TopRated.css'
+const TopRated = () => {
   return (
     <div>
     
@@ -8,5 +8,5 @@ const toprated = () => {
   )
 }
 
-export default toprated
+export default TopRated;
 /*Database bata toprated rakhe pachi matrai garni*/ 
