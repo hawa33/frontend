@@ -60,13 +60,29 @@ const RegistrationForm = ({ register }) => (
   </div>
 );
 
-const ServiceProviderAdditional = ({ uploadDocument }) => (
-  <div className="service-provider-additional">
-    <h2>Additional Field for Service Providers</h2>
-    <p>Upload verification document for Service Providers</p>
-    <button className="btn" onClick={uploadDocument}>Upload</button>
-  </div>
-);
+const ServiceProviderAdditional = ({ uploadDocument }) => {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  return (
+    <div className="service-provider-additional">
+      <h2>Additional Field for Service Providers</h2>
+      <p>Upload verification document for Service Providers</p>
+      <input
+        type="file"
+        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+        onChange={handleFileChange}
+      />
+      {selectedFile && <p>Selected File: {selectedFile.name}</p>}
+      <button className="btn" onClick={() => uploadDocument(selectedFile)}>
+        Upload
+      </button>
+    </div>
+  );
+};
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
@@ -85,8 +101,26 @@ const RegistrationPage = () => {
     // Registration logic here
   };
 
-  const uploadDocument = () => {
-    // Document upload logic here
+  const uploadDocument = (file) => {
+    if (file) {
+      // File upload logic here
+      console.log('File to upload:', file);
+
+      // Example: using FormData for uploading via fetch or Axios
+      const formData = new FormData();
+      formData.append('document', file);
+
+      // Example of sending the file to a server endpoint
+      // fetch('/api/upload', {
+      //   method: 'POST',
+      //   body: formData,
+      // })
+      // .then(response => response.json())
+      // .then(data => console.log('Upload success:', data))
+      // .catch(error => console.error('Upload error:', error));
+    } else {
+      console.log('No file selected');
+    }
   };
 
   return (

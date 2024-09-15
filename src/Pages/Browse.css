@@ -52,7 +52,32 @@
     text-align: center;
     color: var(--secondary-color);
   }
-  
+  /* Home button container */
+.home-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Space around the button */
+}
+
+/* Home button styles */
+.home-btn {
+  background-color: var(--primary-color); /* Match primary color */
+  color: var(--secondary-color); /* Match text color */
+  border: 2px solid var(--primary-color); /* Border to match button */
+  padding: 12px 24px; /* Button padding for size */
+  font-size: 16px;
+  border-radius: 25px; /* Rounded corners for button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the home button */
+.home-btn:hover {
+  background-color: var(--secondary-color); /* Swap colors on hover */
+  color: var(--primary-color); /* Swap text color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
   .hero-section {
     text-align: center;
     padding: 80px 5%;

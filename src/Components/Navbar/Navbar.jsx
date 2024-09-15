@@ -29,13 +29,15 @@ const Navbar = () => {
           <button className="browse-button" tabIndex="0" onClick={handleBrowse}>
             Browse
           </button>
-          <div className="login-register-wrapper">
+          <div className="register-wrapper">
             <button className="register-button" tabIndex="0" onClick={handleRegister}>
               Register
             </button>
+            <div className='login-wrapper'>
             <button className="login-button" tabIndex="0" onClick={handleLogin}>
               Login
             </button>
+            </div>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import FeaturedServices from './Pages/FeaturedServices';
+import ServiceProviderProfile from './Pages/ServiceProviderProfile';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,6 +37,8 @@ const App = () => {
         {/* Authenticated Routes */}
         <Route element={<AuthLayout isLoggedIn={isLoggedIn} />}>
           <Route path="/customer" element={<CustomerPage />} />
+          <Route path="/serviceproviderprofile" element={<ServiceProviderProfile />} />
+          {/* Add more authenticated routes here */}
         </Route>
       </Routes>
     </BrowserRouter>
@@ -55,11 +58,12 @@ const MainLayout = () => {
 // AuthLayout for protected routes
 const AuthLayout = ({ isLoggedIn }) => {
   if (!isLoggedIn) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login" />; // Redirect to login if not authenticated
   }
-  
+
   return (
     <>
+      <Navbar />
       <Outlet />
       <Footer />
     </>

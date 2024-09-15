@@ -4,7 +4,7 @@
   justify-content: center; /* Center horizontally */
   align-items: flex-start; /* Align items to the top */
   width: 100%;
-  padding: 0 20px; /* Added padding for responsiveness */
+  padding: 0 20px; /* Padding for responsiveness */
   box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 }
 
@@ -15,54 +15,62 @@
   align-items: center; /* Center horizontally */
   justify-content: flex-start; /* Align content at the top */
   width: 100%;
-  max-width: 1200px; /* Adjusted max-width */
+  max-width: 1200px; /* Set a max-width for large screens */
   padding: 20px; /* Added padding for spacing */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+  box-sizing: border-box; /* Padding included in the element's width */
 }
 
 /* Title styles */
 .title {
   color: #000;
-  margin: 20px 0 10px; /* Adjusted margin for better spacing */
-  font: 700 40px/120% "Roboto", sans-serif; /* Quoted font name */
-  text-align: center; /* Center the text */
-  letter-spacing: 0.5px; /* Slight letter-spacing for clarity */
+  margin: 20px 0 10px; /* Adjusted margin for spacing */
+  font: 700 40px/120% "Roboto", sans-serif; /* Font size, weight, and family */
+  text-align: center; /* Center text */
+  letter-spacing: 0.5px; /* Slight letter-spacing */
 }
 
 /* Subtitle styles */
 .subtitle {
-  color: #333; /* Slightly lighter color for better contrast */
-  margin: 10px 0 15px 0;
-  font-family: "Roboto", sans-serif; /* Quoted font name */
+  color: #333; /* Lighter text for contrast */
+  margin: 10px 0 15px 0; /* Margin for spacing */
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 18px; /* Explicit font size for consistency */
-  text-align: center; /* Center the text */
-  line-height: 1.5; /* Improved line-height for readability */
+  font-size: 18px; /* Set font size */
+  text-align: center; /* Center text */
+  line-height: 1.5; /* Improved readability */
 }
 
 /* Button wrapper styles */
 .button-wrapper {
   display: flex;
+  flex-direction: row; /* Stack buttons vertically */
   justify-content: center; /* Center the buttons horizontally */
   align-items: center; /* Center the buttons vertically */
-  gap: 1rem; /* Gap between the buttons */
-  margin-top: 20px; /* Added margin for spacing */
-  flex-direction: row; /* Make buttons inline */
+  gap: 1rem; /* Space between buttons */
+  margin-top: 20px; /* Add space from subtitle */
 }
 
-/* Button styles */
+/* Register and login wrapper styles */
+.register-wrapper,
+.login-wrapper {
+  display: flex;
+  flex-direction: row; /* Stack Register and Login vertically */
+  align-items: center; /* Center them horizontally */
+  gap: 1rem; /* Space between Register and Login buttons */
+}
+
+/* Button styles (unchanged) */
 .login-button,
 .register-button,
 .browse-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto", sans-serif; /* Quoted font name */
-  border-radius: 0.5rem; /* Rounded corners for all buttons */
-  padding: 0.75rem 1.5rem; /* Adjusted padding for better button sizing */
-  cursor: pointer;
-  text-decoration: none; /* Ensures consistent styling */
-  color: inherit; /* Inherit the color */
+  font-family: "Roboto", sans-serif; /* Font styling */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 0.75rem 1.5rem; /* Button padding */
+  cursor: pointer; /* Pointer on hover */
+  color: inherit; /* Inherit text color */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -72,16 +80,15 @@
   padding: 10px 20px; /* Consistent padding */
   background-color: #000000; /* Black background */
   color: #ffffff; /* White text */
-  border: 2px solid #000000; /* Border for definition */
+  border: 2px solid #000000; /* Black border */
   transition: background-color 0.3s ease, transform 0.3s ease;
-  
 }
 
 /* Browse button styles */
 .browse-button {
   padding: 10px 20px;
-  border: 2px solid transparent; /* Transparent border for better sizing consistency */
-  border-radius: 0.5rem; /* Consistent border-radius */
+  border: 2px solid transparent; /* Transparent border for sizing consistency */
+  border-radius: 0.5rem; /* Consistent rounding */
   color: #ffffff; /* White text */
   background-color: #000000; /* Black background */
   font-size: 16px;
@@ -94,13 +101,13 @@
 .register-button:hover {
   color: #000000; /* Black text */
   background-color: #ffffff; /* White background */
-  transform: scale(1.05); /* Slight scaling for interaction feedback */
+  transform: scale(1.05); /* Scale slightly */
 }
 
 /* Focus effects for buttons */
 .browse-button:focus,
 .login-button:focus,
 .register-button:focus {
-  outline: 2px solid #000000; /* Black outline for focus state */
-  outline-offset: 2px; /* Space between button and outline */
+  outline: 2px solid #000000; /* Black outline for accessibility */
+  outline-offset: 2px; /* Offset the outline */
 }
