@@ -11,10 +11,12 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import FeaturedServices from './Pages/FeaturedServices';
-import ServiceProviderProfile from './Pages/ServiceProviderProfile';
+import ServiceProviderDashboard from './Pages/ServiceProviderDashboard';
+import TopRated from './Components/TopRated/TopRated';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userRole, setUserRole] = useState(''); // Track user role
 
   return (
     <BrowserRouter>
@@ -27,18 +29,23 @@ const App = () => {
         {/* Public Routes with MainLayout */}
         <Route element={<MainLayout />}>
           <Route path="/featured" element={<FeaturedServices />} />
+          <Route path="/toprated" element={<TopRated />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/browse" element={<Browse />} />
-          <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} setUserRole={setUserRole} />} />
           <Route path="/register" element={<RegistrationPage />} />
         </Route>
 
         {/* Authenticated Routes */}
-        <Route element={<AuthLayout isLoggedIn={isLoggedIn} />}>
+        <Route element={<AuthLayout isLoggedIn={isLoggedIn} userRole={userRole} />}>
           <Route path="/customer" element={<CustomerPage />} />
-          <Route path="/serviceproviderprofile" element={<ServiceProviderProfile />} />
-          {/* Add more authenticated routes here */}
+          <Route path="/service-provider" element={<ServiceProvider />} /> {/* Route for ServiceProvider */}
+        </Route>
+
+        {/* Dashboard specific layout */}
+        <Route element={<DashboardLayout />}>
+          <Route path="/service-dashboard" element={<ServiceProviderDashboard />} /> {/* Correct route for dashboard */}
         </Route>
       </Routes>
     </BrowserRouter>
@@ -49,6 +56,7 @@ const App = () => {
 const MainLayout = () => {
   return (
     <>
+      <Navbar />
       <Outlet /> {/* This is where the page content will be rendered */}
       <Footer />
     </>
@@ -56,7 +64,7 @@ const MainLayout = () => {
 };
 
 // AuthLayout for protected routes
-const AuthLayout = ({ isLoggedIn }) => {
+const AuthLayout = ({ isLoggedIn, userRole }) => {
   if (!isLoggedIn) {
     return <Navigate to="/login" />; // Redirect to login if not authenticated
   }
@@ -75,8 +83,18 @@ const HomeLayout = () => {
   return (
     <>
       <Navbar />
-      <ServiceProvider />
+      <ServiceProvider /> {/* Including ServiceProvider component */}
       <Outlet /> {/* Home content will be injected here */}
+      <Footer />
+    </>
+  );
+};
+
+// DashboardLayout for ServiceProviderDashboard (no Navbar)
+const DashboardLayout = () => {
+  return (
+    <>
+      <Outlet /> {/* Only dashboard content will be rendered */}
       <Footer />
     </>
   );

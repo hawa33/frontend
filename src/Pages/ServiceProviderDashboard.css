@@ -1,0 +1,290 @@
+:root {
+  --primary: #000;
+  --secondary: #fff;
+  --accent: #f0f0f0;
+  --text: #333;
+  --transition: 0.3s ease;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 0;
+}
+
+.service-provider-dashboard {
+  background-color: var(--secondary);
+  position: relative;
+  display: flex;
+  padding-top: 70px;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.top-bar {
+  background-color: var(--secondary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position:fixed;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 30px;
+  transition: all var(--transition);
+  top: 0;
+  margin-left: 100px;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+.profile-icon {
+  border-radius: 50%;
+  background-color: var(--accent);
+  width: 40px;
+  height: 40px;
+  transition: transform var(--transition);
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  cursor: pointer;
+  padding: 10px 20px; /* Increased padding for better appearance */
+  border-radius: 25px; /* Rounded corners for a smoother look */
+  background-color: var(--primary); /* Primary color background */
+  color: var(--secondary); /* Text color contrasting the background */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: 16px; /* Slightly increased font size */
+  font-weight: 500; /* Make the text a bit bolder */
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: var(--text); /* Hover color change */
+  color: var(--secondary); /* Ensure text stays visible */
+  transform: translateY(-3px); /* Adds a subtle lift effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+
+.section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: center;
+  padding: 50px 30px;
+  box-sizing: border-box;
+}
+
+.section-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  flex: 1;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-description {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 700px;
+  font-size: 16px;
+}
+
+.add-listing-btn {
+  display: flex;
+  width: 220px;
+  max-width: 100%;
+}
+
+.primary-btn {
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 100%;
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.primary-btn:hover {
+  background-color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-bg {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.05;
+}
+
+.list-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: center;
+  padding: 50px 30px;
+  background-color: var(--accent);
+  box-sizing: border-box;
+}
+
+.list-title {
+  font-size: 36px;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.list-row {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.list-item, .issue-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+  height: 240px;
+  padding: 30px;
+  background-color: var(--secondary);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition);
+  overflow: hidden;
+  position: relative;
+}
+
+.list-item:hover, .issue-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.item-icon {
+  border-radius: 50%;
+  background-color: var(--accent);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--primary);
+  transition: all var(--transition);
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary);
+  padding: 30px;
+  transition: all var(--transition);
+}
+
+.list-item:hover .item-icon, .issue-item:hover .item-icon {
+  transform: translateY(-60px);
+}
+
+.list-item:hover .item-details, .issue-item:hover .item-details {
+  top: 45%;
+}
+
+.item-title {
+  color: var(--primary);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.item-subtitle {
+  color: var(--text);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.item-price {
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .list-item, .issue-item { 
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation { 
+    display: none;
+  }
+  .list-item, .issue-item { 
+    min-width: 100%;
+  }
+}

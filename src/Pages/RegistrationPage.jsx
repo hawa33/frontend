@@ -85,7 +85,7 @@ const ServiceProviderAdditional = ({ uploadDocument }) => {
 };
 
 const RegistrationPage = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize the navigate function
   const [userType, setUserType] = useState('');
   const formRef = useRef(null);
 
@@ -98,15 +98,16 @@ const RegistrationPage = () => {
   };
 
   const register = () => {
-    // Registration logic here
+    // Registration logic here, e.g., form validation, API calls, etc.
+
+    // After successful registration, navigate to the login page
+    navigate('/login');
   };
 
   const uploadDocument = (file) => {
     if (file) {
-      // File upload logic here
       console.log('File to upload:', file);
 
-      // Example: using FormData for uploading via fetch or Axios
       const formData = new FormData();
       formData.append('document', file);
 

@@ -1,11 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import Loader from '../Components/Loader/Loader'; // Import the Loader component
 
-const LoginPage = ({ setIsLoggedIn }) => {
+const LoginPage = ({ setIsLoggedIn, setUserRole }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false); // State to track loading status
   const formRef = useRef(null);
 
   useEffect(() => {
@@ -13,19 +15,26 @@ const LoginPage = ({ setIsLoggedIn }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading
+
     // Simulated login logic for demonstration
     // Replace with actual login logic using an API call or authentication service
-    if (email === 'user@example.com' && password === 'password') {
-      // Update authentication state
-      setIsLoggedIn(true);
-      // Redirect to /customer page after successful login
-      navigate('/customer');
-    } else {
-      // Handle incorrect login credentials
-      alert('Invalid email or password. Please try again.');
-    }
+    setTimeout(() => {
+      if (email === 'provider@example.com' && password === 'password') {
+        setIsLoggedIn(true);
+        setUserRole('serviceProvider');
+        navigate('/service-dashboard');
+      } else if (email === 'customer@example.com' && password === 'password') {
+        setIsLoggedIn(true);
+        setUserRole('customer');
+        navigate('/customer');
+      } else {
+        alert('Invalid email or password. Please try again.');
+      }
+      setLoading(false); // Stop loading
+    }, 1000); // Simulate network delay
   };
 
   const scrollToForm = () => {
@@ -34,6 +43,8 @@ const LoginPage = ({ setIsLoggedIn }) => {
 
   return (
     <div className="login-page">
+      {loading && <Loader />} {/* Show loader when loading */}
+      
       <header className="header">
         <div className="logo-container">
           <div className="logo"></div>
